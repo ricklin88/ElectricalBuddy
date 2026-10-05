@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Electrical Buddy</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>CEC Electrical Tool</h1>
+        <p>Conductor Ampacity Lookup</p>
+    </header>
+
+    <main>
+
+        <section class="controls">
+            <label for="conductor-size">Conductor Size:</label>
+            <select id="conductorSizeInput">
+                <option value="" Selected>Select Size</option>
+                <option value="14">14</option>
+                <option value="12">12</option>
+                <option value="10">10</option>
+                <option value="8">8</option>
+            </select>
+            <label for="demandInput">Demand:</label>
+            <input type="number" id="demandInput" min="0">
+            <p id="result"></p>
+        </section>
+
+        <section class="table-section">
+
+            <h2>Table 2 — Copper Conductors</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>AWG</th>
+                        <th>60°C</th>
+                        <th>75°C</th>
+                        <th>90°C</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr data-size="14" data-ampacity="20">
+                        <td>14</td>
+                        <td>15 A</td>
+                        <td>20 A</td>
+                        <td>25 A</td>
+                    </tr>
+
+                    <tr data-size="12" data-ampacity="25">
+                        <td>12</td>
+                        <td>20 A</td>
+                        <td>25 A</td>
+                        <td>30 A</td>
+                    </tr>
+
+                    <tr data-size="10" data-ampacity="35">
+                        <td>10</td>
+                        <td>30 A</td>
+                        <td>35 A</td>
+                        <td>40 A</td>
+                    </tr>
+
+                    <tr data-size="8" data-ampacity="50">
+                        <td>8</td>
+                        <td>40 A</td>
+                        <td>50 A</td>
+                        <td>55 A</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
